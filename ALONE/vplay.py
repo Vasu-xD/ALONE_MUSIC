@@ -231,3 +231,4 @@ async def vstream(client, m: Message):
                await huehue.edit(f"Started **[Live Stream 📺]({link})** in `{chat_id}`", disable_web_page_preview=True)
             except Exception as ep:
                await huehue.edit(f"`{ep}`"
+                                )
