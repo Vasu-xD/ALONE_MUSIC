@@ -1,0 +1,53 @@
+{
+    "name": "₳ⱠØ₦Ɇ VC PLAYER",
+    "description": "A SIMPLE TELEGRAM BOT TO PLAY MUSIC IN VOICE CHAT,MADE WITH LOVE BY ₳ⱠØ₦Ɇ™",
+    "logo": "https://te.legra.ph/file/9ee73043c321314dcfbd1.jpg",
+    "keywords": [
+        "Telegram",
+        "VCBot",
+        "MusicPlayer"
+    ],
+    "repository": "https://github.com/improking/Alone_Music",
+    "env": {
+        "SESSION": {
+            "description": "Pyrogram String Session",
+            "required": true
+        },
+        "API_ID": {
+            "description": "my.telegram.org",
+            "value": "",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "my.telegram.org",
+            "value": "",
+            "required": true
+        },
+        "HNDLR": {
+            "description": "Handler | Default (!)",
+            "value": "!",
+            "required": false 
+        },
+        "GROUP_MODE": {
+            "description": "Leave as it is",
+            "value": "True",
+            "required": true 
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
